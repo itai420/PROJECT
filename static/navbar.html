@@ -1,0 +1,19 @@
+<div class="navBarBody">
+<div class="navBar">
+    <img height="100%" src="https://density-calcium.co.il/wp-content/uploads/2020/11/density_logo.svg">
+
+<div>
+    
+</div>
+
+
+<a href="/home">Home</a>
+    <a href="/testimonies">testimonies</a>
+    <a ng-if="!IsOut" href="/myTestimonies">my testimonies</a>
+    <a ng-if="manager" href="/pendingTestimonies">pending testimonies</a>
+
+    <a ng-if="IsOut" class="toLogIn" href="/login">Log in</a>
+    <a ng-if="!IsOut" class="toLogIn" href="/logout">Log out</a>
+
+</div>
+</div>

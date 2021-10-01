@@ -1,0 +1,48 @@
+
+.navBar a{
+    font-family: assistant,Sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 33px;
+    border-width: 0px;
+    border-style: solid;
+    text-decoration: none;
+    padding: 16px 16px;
+    color: black;
+}
+.navBarBody{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: 76px;
+    background-color: #f8f8f8;
+
+
+}
+.navBar{
+    border-radius: 38px 38px 38px 38px;
+    border-top-left-radius: 38px;
+    border-top-right-radius: 38px;
+    border-bottom-right-radius: 38px;
+    border-bottom-left-radius: 38px;
+    width: 92.665%;
+
+
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 21%);
+    height: 100%;
+    z-index: 1;
+    position: sticky;
+    list-style-type: none;
+    margin: 0;
+    background-color: white;
+    display:flex;
+}
+
+.toLogIn{
+    margin-left: auto;
+}
+
+.navBar a:hover{
+    padding: 15px 15px;
+    border-width: 1px;
+    border-color: white;
+}

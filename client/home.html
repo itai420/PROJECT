@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Home">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/vendors/angular.min.js"></script>
+  <script src="\apps\Home.js"></script>
+  <script src="\apps\navbar.js"></script>
+  <link rel="stylesheet" href="\styleHome.css">
+  <link rel="stylesheet" href="\navBars.css">
+  <title>Document</title>
+</head>
+
+<body ng-controller="Home">
+  <navbar></navbar>
+<div class="drops">
+  <drop ng-click="goToTheTestimony(content[0]._id)" ng-repeat="content in arr" class="dropContainer" content='content'></drop>
+ </div>
+</body>
+</html>

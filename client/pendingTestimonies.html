@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pendingTestimonies">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/vendors/angular.min.js"></script>
+    <!-- <script src="/static/vendors/fontawesome-pro-5.10.2/js/all.js"></script> -->
+    <script src="https://kit.fontawesome.com/685fee1bbe.js" crossorigin="anonymous"></script>
+    <script src="/vendors/angular-material/angular-material.min.js"></script>
+    <script src="/vendors/angular-aria/angular-aria.min.js"></script>
+    <script src="/vendors/angular-animate/angular-animate.min.js"></script>
+    <script src="\apps\navbar.js"></script>
+    <script src="/vendors/angular-messages/angular-messages.min.js"></script>
+    <script src="\apps\pendingTestimonies.js"></script>
+    <link rel="stylesheet" href="/vendors/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="\pendingTestimonies.css">
+    <link rel="stylesheet" href="\navBars.css">
+    <link rel="stylesheet" href="/vendors/fontawesome-pro-5.10.2/css/all.css">
+
+    <title>pending</title>
+</head>
+<body ng-controller="pendingTestimoniesController">
+    <navBar></navBar>
+    <md-select  class="md-no-underline filter" ng-model="filter">
+        <md-option ng-click="fu()" ng-value="filter" ng-repeat="filter in options">{{filter}} </md-option>
+        </md-select>
+    <div class="cont2" ng-show="filter===testimony.Approved||filter==='filter by status'" id={{testimony._id}} ng-repeat="testimony in myTestimonies">
+        <testimony id='id' testimony="testimony"></testimony>
+    </div>
+    
+</body>
+</html>

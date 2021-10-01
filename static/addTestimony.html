@@ -1,0 +1,83 @@
+<!-- <div class="md-dialog-container" id="myDialog"> -->
+<md-dialog class="dialog" layout-padding="">
+    <form ng-cloak autocomplete="off" action="/testimonies/addTestimonies" method="POST">
+        <label class="dialogLable">Add testimony</label>
+        <div layout-gt-sm="row" class="dialogInput">
+            <md-input-container class="mdContainer">
+                <label>name</label>
+                <input ng-model='name' name="name" type="text" required>
+            </md-input-container>
+
+            <md-input-container class="mdContainer">
+                <label>age</label>
+                <input ng-model='age' name="age" type="number" required>
+            </md-input-container>
+        </div>
+        <div layout-gt-sm="row" class="dialogInput">
+            <md-input-container class="mdContainer">
+                <label>sports</label>
+                <input ng-model='sports' name="sports" type="text" required>
+            </md-input-container>
+
+            <md-input-container class="mdContainer">
+                <label>activity level</label>
+                <input ng-model='activity' name="activity" type="text" required>
+            </md-input-container>
+        </div>
+
+        <div layout-gt-sm="row" class="dialogInput">
+            <md-input-container class="mdContainer">
+                <label>Type of injury</label>
+                <md-select ng-model="filter" name="typeOfInjury" required>
+                    <md-option ng-click="updateLevel()" ng-value="typeOfInjury" ng-repeat="typeOfInjury in injuries" required>{{typeOfInjury}} </md-option> 
+                </md-select>
+            </md-input-container>
+    
+            <md-input-container class="mdContainer">
+                <label>Level of injury</label>
+                <md-select ng-model="injuryfilter" name="LevelOfInjury" required>
+                    <md-option ng-value="LevelOfInjury" ng-repeat="LevelOfInjury in LevelOfinjuri" required>{{LevelOfInjury}} </md-option> 
+                </md-select>
+            </md-input-container>
+        </div>
+
+
+
+        <!-- <div layout-gt-sm="row" class="dialogInput">
+
+        <md-input-container class="mdContainer">
+            <label>Type of injury</label>
+            <md-select ng-model="filter" name="typeOfInjury" required>
+                <md-option ng-value="typeOfInjury" ng-repeat="typeOfInjury in injuries" required>{{typeOfInjury}} </md-option> 
+            </md-select>
+        </md-input-container>
+        </div> -->
+
+        <div layout-gt-sm="row" class="dialogInput">
+            <div class="treatment">
+            <span class="treatmentSpan">took</span>
+            <md-input-container class="treatmentmdContainer">
+                <label>amount</label>
+                <input ng-model='quantity' name="quantity" type="number" required>
+            </md-input-container>
+            <span class="treatmentSpan">a day for </span>
+            <md-input-container class="treatmentmdContainer">
+                <label>time</label>
+                <input ng-model='weeks' name="weeks" type="number" required>
+            </md-input-container>
+            <span class="treatmentSpan">weeks</span>
+
+        </div>
+        </div>
+
+        <md-input-container>
+            <label>Your special experience</label>
+            <input ng-model='Quote' name="Quote" type="text" required>
+        </md-input-container>
+        <div>
+            <input type="submit" class="button" value="submit">
+        </div>
+
+    </form>
+</md-dialog>
+<!-- </div> -->
