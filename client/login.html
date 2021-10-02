@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="Authintication">
+<html lang="en" ng-app="authentication">
 <!-- <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,10 +16,12 @@
 	<script src="/vendors/angular-material/angular-material.min.js"></script>
 	<script src="/vendors/angular-aria/angular-aria.min.js"></script>
 	<script src="/vendors/angular-messages/angular-messages.min.js"></script>
+	<script src="/apps/authentication/AuthenticationModule.js"></script>
+	<script src="\apps\navbar\navbarModule.js"></script>
 
-	<script src="/apps/Authintication.js"></script>
+	<script src="/apps/authentication/authentication.js"></script>
 	<link rel="stylesheet" href="/navBars.css">
-	<script src="\apps\navbar.js"></script>
+	<script src="\apps\navbar\navbar.js"></script>
 
 	<link rel="stylesheet" href="/style.css">
 	<link rel="stylesheet" href="/vendors/angular-material/angular-material.css">
@@ -27,7 +29,7 @@
 	<title>Log In</title>
 </head>
 
-<body ng-controller="AuthinticationController">
+<body ng-controller="authenticationController">
 	<navbar></navbar>
 	<div class="errorDiv" ><span ng-show="errorUser" class="errorMessage">incorrect username or password</span></div>
 	<div class="errorDiv"><span ng-show="errorEmpty" class="errorMessage">please fill all </span></div>
@@ -43,11 +45,11 @@
 				<label for="checkbox">show password </label>
 			</div>
 			<div>
-				<button class="signIn" type="submit" style="color: black;">Log in</button>
+				<button class="signIn" type="submit" >Log in</button>
 			</div>
 			</form>
 			<div>
-				<a href="/SignUp" class="moveTo" style="color: black;">or sign up</a>
+				<a href="/SignUp" class="moveTo">or sign up</a>
 			</div>
 	</div>
 </body>

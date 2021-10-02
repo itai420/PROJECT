@@ -13,7 +13,7 @@ const myTestimoniesRoute = require('./routes/myTestimoniesRoute')
 
 const passport = require('passport')
 const users = require('./models/users')
-const AuthHandler = require('./handlers/authinticationHandler')
+const AuthHandler = require('./handlers/authenticationHandler')
 const initializePassport = require('./passport-config')
 const flash = require('express-flash')
 

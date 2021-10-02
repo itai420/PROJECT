@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="Authintication">
+<html lang="en" ng-app="authentication">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +7,12 @@
 	<script src="/vendors/angular-material/angular-material.min.js"></script>
 	<script src="/vendors/angular-aria/angular-aria.min.js"></script>
 	<script src="/vendors/angular-messages/angular-messages.min.js"></script>
+	<script src="/apps/authentication/AuthenticationModule.js"></script>
+	<script src="\apps\navbar\navbarModule.js"></script>
 
-	<script src="/apps/Authintication.js"></script>
+	<script src="/apps/authentication/authentication.js"></script>
 	<link rel="stylesheet" href="/navBars.css">
-	<script src="\apps\navbar.js"></script>
+	<script src="\apps\navbar\navbar.js"></script>
 
 	<link rel="stylesheet" href="/style.css">
 	<link rel="stylesheet" href="/vendors/angular-material/angular-material.css">
@@ -18,7 +20,7 @@
 	<title>Log In</title>
 </head>
 
-<body ng-controller="AuthinticationController">
+<body ng-controller="authenticationController">
 
 	<navbar></navbar>
 	<div class="errorDiv"><span ng-show="errorTaken" class="errorMessage">name or email is already in use</span></div>
@@ -27,7 +29,7 @@
 	
 	<div class="formDiv">
 			<form autocomplete="off" class="form" id="form" ng-submit="checkIfNamEmailNew(name,password,Email)">
-				<h2 class="white">Sign up</h2>
+				<h2>Sign up</h2>
 				<input class="nameANDpass" type="text" placeholder="Name"  ng-model="name" name="Name">
 				<input class="nameANDpass" type="{{passwordType}}" ng-model="password" placeholder="Password" name="Password">
 				<input class="nameANDpass" type="email" placeholder="Email" ng-model="Email" name="Email">

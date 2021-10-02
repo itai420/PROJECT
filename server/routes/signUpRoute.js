@@ -1,6 +1,6 @@
 const express =require('express');
 const router = express.Router();
-const myHandler=require('../handlers/authinticationHandler')
+const myHandler=require('../handlers/authenticationHandler')
 const bcrypt= require('bcryptjs')
 
 function IsOut(req,res,next){

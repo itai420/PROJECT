@@ -7,9 +7,12 @@
     <script src="/vendors/angular-material/angular-material.min.js"></script>
     <script src="/vendors/angular-aria/angular-aria.min.js"></script>
     <script src="/vendors/angular-animate/angular-animate.min.js"></script>
-    <script src="\apps\navbar.js"></script>
+    <script src="\apps\navbar\navbar.js"></script>
     <script src="/vendors/angular-messages/angular-messages.min.js"></script>
-    <script src="\apps\testimonies.js"></script>
+    <script src="\apps\testimonies\testimonies.js"></script>
+    <script src="\apps\testimonies\testimoniesModule.js"></script>
+    <script src="\apps\navbar\navbarModule.js"></script>
+
     <link rel="stylesheet" href="/vendors/angular-material/angular-material.min.css">
     <link rel="stylesheet" href="\styleTestimonies.css">
     <link rel="stylesheet" href="\navBars.css">
@@ -24,8 +27,8 @@
 
     </md-toast>
 </div>
-    <md-button ng-show="!IsOut" class="md-primary md-raised" ng-click="showDialog($event)">add testimony</md-button>
-    <md-button ng-show="IsOut" ng-click="openToast()" class="md-primary md-raised" > add testimony</md-button>
+    <md-button ng-show="!IsOut" class="md-primary md-raised density" ng-click="showDialog($event)">add testimony</md-button>
+    <md-button ng-show="IsOut" ng-click="openToast()" class="md-primary md-raised density" > add testimony</md-button>
     <md-select  placeholder="filter by injury" class="md-no-underline filter" ng-model="filter">
         <md-option ng-click="fu()" ng-model="filter" ng-value="opt" ng-repeat="opt in options">{{opt}} </md-option>
         </md-select>

@@ -1,6 +1,6 @@
 const { authenticate } = require('passport/lib');
 const bcrypt = require('bcryptjs');
-const myHandler = require('./handlers/authinticationHandler');
+const myHandler = require('./handlers/authenticationHandler');
 
 const localStrategy = require('passport-local').Strategy
 
@@ -10,7 +10,7 @@ function initialize(passport, findByName, getUserById) {
     console.log("trying initizlize")
 
     const authenticateUser = async (name, password, done) => {
-        console.log("trying authinticate in passportconfig")
+        console.log("trying authenticate in passportconfig")
 
         const user = await findByName(name)
         console.log(user)

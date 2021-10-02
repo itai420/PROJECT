@@ -1,11 +1,11 @@
 const express =require('express');
 const router = express.Router();
 const users =require('.././models/users')
-const myHandler=require('../handlers/authinticationHandler')
+const myHandler=require('../handlers/authenticationHandler')
 const bcrypt= require('bcryptjs')
 const passport=require('passport')
 const initializePassport= require('../passport-config')
-const AuthHandler=require('../handlers/authinticationHandler')
+const AuthHandler=require('../handlers/authenticationHandler')
 
 function IsOut(req,res,next){
     if(!req.isAuthenticated()) return next();

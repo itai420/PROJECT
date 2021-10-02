@@ -21,7 +21,7 @@ router.post('/addTestimonies', async (req, res) => {
     const {name, age, sports, activity, weeks, quantity, Quote, typeOfInjury} = req.body
     const Email = req.user.email
     const Approved= req.user.manager ? "approved":"pending"
-    console.log("this issssssssssssssss",typeOfInjury)
+    console.log("this is",typeOfInjury)
     Profile = {name, age, sports, activity}
     Injury={typeOfInjury}
     time=(weeks==1 ? weeks+' week':weeks+' weeks')

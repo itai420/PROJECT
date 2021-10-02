@@ -7,7 +7,7 @@
     border-width: 0px;
     border-style: solid;
     text-decoration: none;
-    padding: 16px 16px;
+    padding: 16px 20px;
     color: black;
 }
 .navBarBody{
@@ -18,13 +18,21 @@
 
 
 }
+.flexNav{
+    width: 100%;
+    height: 76px;
+    display: flex;
+    align-items: center;
+
+}
+
 .navBar{
     border-radius: 38px 38px 38px 38px;
     border-top-left-radius: 38px;
     border-top-right-radius: 38px;
     border-bottom-right-radius: 38px;
     border-bottom-left-radius: 38px;
-    width: 92.665%;
+    width: 95%;
 
 
     box-shadow: 0 0 10px 0 rgb(0 0 0 / 21%);
@@ -38,11 +46,21 @@
 }
 
 .toLogIn{
+    justify-self: flex-end;
     margin-left: auto;
 }
 
-.navBar a:hover{
-    padding: 15px 15px;
-    border-width: 1px;
-    border-color: white;
+.navBar a::after{
+    content: '';
+    background-color:transparent;
+    display: block;
+    width:100%;
+    height:2px;
+}
+.navBar a:hover::after{
+    content: '';
+    background-color:#1e294e;
+    display: block;
+    width: 100%;
+    height:2px;
 }

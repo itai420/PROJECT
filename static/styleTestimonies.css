@@ -3,6 +3,10 @@ html{
 
     background-color: #f8f8f8;
 }
+.density{
+    background-color: rgb(64, 73, 106) !important;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 50%) !important;
+}
 body{
     -ms-overflow-style:none;
     scrollbar-width: thin;

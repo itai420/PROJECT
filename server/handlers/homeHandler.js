@@ -1,6 +1,6 @@
 const dbhandler = require('./dbHandler')
 homeHandler = {}
 
-homeHandler.getQuotes = () => dbhandler.getAllQuotes('testimonies')
+homeHandler.getQuotes = (filter) => dbhandler.findQuotes('testimonies',filter)
 
 module.exports = homeHandler
