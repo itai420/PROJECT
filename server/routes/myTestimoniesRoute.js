@@ -1,6 +1,8 @@
 const express =require('express');
 const router = express.Router();
 const myHandler=require('../handlers/myTestimoniesHandler');
+const path = require('path');
+
 
 function IsIn(req,res,next){
     if(req.isAuthenticated()) return next();
@@ -10,7 +12,7 @@ function IsIn(req,res,next){
 
 
 router.get('/',IsIn , (req, res) => {
-    return res.sendFile('/client/myTestimonies.html', { root: "C:/Users/Itai/Desktop/project" });
+    return res.sendFile('/client/myTestimonies.html', { root: path.resolve(__dirname,'../../') });
 });
 
 

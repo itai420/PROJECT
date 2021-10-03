@@ -2,6 +2,8 @@ const express =require('express');
 const router = express.Router();
 const myHandler=require('../handlers/pendingTestimoniesHandler');
 const testimonies = require('../models/testimonies');
+const path = require('path');
+
 
 function Ismanager(req,res,next){
 
@@ -11,7 +13,7 @@ function Ismanager(req,res,next){
 
 
 router.get('/',Ismanager, (req, res) => {
-    return res.sendFile('/client/pendingTestimonies.html', { root: "C:/Users/Itai/Desktop/project" });
+    return res.sendFile('/client/pendingTestimonies.html', { root: path.resolve(__dirname,'../../') });
 });
 
 

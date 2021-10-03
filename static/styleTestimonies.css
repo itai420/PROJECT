@@ -7,6 +7,9 @@ html{
     background-color: rgb(64, 73, 106) !important;
     box-shadow: 0 0 10px 0 rgb(0 0 0 / 50%) !important;
 }
+.space{
+    line-height: 200%;
+}
 body{
     -ms-overflow-style:none;
     scrollbar-width: thin;

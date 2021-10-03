@@ -2,6 +2,8 @@ const express =require('express');
 const router = express.Router();
 const myHandler=require('../handlers/authenticationHandler')
 const bcrypt= require('bcryptjs')
+const path = require('path');
+
 
 function IsOut(req,res,next){
   if(!req.isAuthenticated()) return next();
@@ -27,7 +29,7 @@ router.post('/', async (req, res) => {
 
 
 router.get('/',IsOut, (req, res) => {
-    res.sendFile('/client/SignUp.html', { root: "C:/Users/Itai/Desktop/project" });
+    res.sendFile('/client/SignUp.html', { root: path.resolve(__dirname,'../../') });
 });
 
 module.exports=router

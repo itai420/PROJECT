@@ -27,16 +27,7 @@ Testimonies.controller('TestimoniesController', ['$timeout', '$scope', '$http', 
 
 $scope.openToast = ()=>{
   $mdToast.show(
-  $mdToast.simple().textContent('you have to sign in first').hideDelay(2000).position('top left')
-  //   {
-  // hiseDelay :0,
-  // position:'top middle',
-  // controller:ToastCtrl,
-  // bindToController:true,
-  // locals :{toastMessage:message},
-  // templateUrl:'toast.html'
-  // }
-  )
+  $mdToast.simple().textContent('you have to sign in first').hideDelay(2000).position('top left')  )
 }
 testimoniesHttpMethods.getTestimonies().then(res => {
     $scope.Testimonies = res.data;
@@ -63,7 +54,7 @@ testimoniesHttpMethods.getTestimonies().then(res => {
   }
 
   function DialogController($scope,$mdDialog){
-    $scope.LevelOfinjuries= {"fracture":["שבר מאמץ","שבר מלא"],"inflammation":["דלקת אקוטית","דלקת כרונית"],"rupture":["קרע מלא","קרע חלקי"]}
+    $scope.LevelOfinjuries= {"fracture":["full fracture","stress fracture"],"inflammation":["chronic inflammation","acute inflammation"],"rupture":["complete rupture","partial rupture"]}
 
   
 

@@ -21,7 +21,6 @@
 <body ng-controller="TestimoniesController">
     <navBar></navBar>
     <h1>what they say</h1>
-    <!-- <md-button ng-click="openToast()"> add</md-button> -->
     <div style="position: absolute;">
     <md-toast>
 
@@ -33,10 +32,9 @@
         <md-option ng-click="fu()" ng-model="filter" ng-value="opt" ng-repeat="opt in options">{{opt}} </md-option>
         </md-select>
 
- <!-- <div class="testimoiesContainer" >        -->
+    <h2 ng-show="Testimonies.length==0"> no testimonies </h2>
     <div  id={{testimony._id}} ng-repeat="testimony in Testimonies">
         <testimony id='id' ng-show="filter===testimony.Injury.typeOfInjury||filter==='no filter'" testimony="testimony"></testimony>
     </div>
-<!-- </div> -->
 </body>
 </html>

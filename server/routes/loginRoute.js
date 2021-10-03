@@ -6,6 +6,8 @@ const bcrypt= require('bcryptjs')
 const passport=require('passport')
 const initializePassport= require('../passport-config')
 const AuthHandler=require('../handlers/authenticationHandler')
+const path = require('path');
+
 
 function IsOut(req,res,next){
     if(!req.isAuthenticated()) return next();
@@ -14,7 +16,7 @@ function IsOut(req,res,next){
 
 router.get('/', IsOut, (req, res) => {
     console.log(req.flash())
-    return res.sendFile('/client/login.html', { root: "C:/Users/Itai/Desktop/project" });
+    return res.sendFile('/client/login.html', { root: path.resolve(__dirname,'../../') });
 });
 
 router.post('/',passport.authenticate('local',{

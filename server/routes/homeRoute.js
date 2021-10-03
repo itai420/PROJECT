@@ -1,5 +1,6 @@
 const express =require('express');
 const myHandler=require('../handlers/homeHandler')
+const path = require('path');
 
 const router = express.Router();
 
@@ -11,11 +12,11 @@ function IsIn(req,res,next){
 
 
 router.get('/', (req, res) => {
-    return res.sendFile('/client/home.html', { root: "C:/Users/Itai/Desktop/project" });
+    return res.sendFile('/client/home.html', { root: path.resolve(__dirname,'../../') });
 });
 
 router.post('/', async (req, res) => {
-    const quoteArr= await myHandler.getQuotes()
+    const quoteArr= await myHandler.getQuotes(req.body.filter)
     return res.send(quoteArr)
 })
 

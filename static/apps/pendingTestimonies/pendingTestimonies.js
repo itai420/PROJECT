@@ -57,35 +57,6 @@ pendingTestimonies.directive('testimony', () => {
 pendingTestimonies.controller('pendingTestimoniesController', ['$timeout', '$scope', '$http', '$anchorScroll', '$location', '$mdDialog', '$mdToast','pendingTestimoniesHttpMethods',
 function ($timeout, $scope, $http, $anchorScroll, $location, $mdDialog, $mdToast,pendingTestimoniesHttpMethods) {
 
-  // $scope.Approving = (id) => {
-  //   return $http({
-  //     method: 'POST',
-  //     url: '/pendingTestimonies',
-  //     headers: {
-  //       'Content-Type': 'application/json'
-  //     },
-  //     data: {
-  //       'change': "approved",
-  //       'tetimonieId': id
-  //     }
-  //   })
-  // }
-
-  // $scope.Denied = (id) => {
-  //   return $http({
-  //     method: 'POST',
-  //     url: '/pendingTestimonies',
-  //     headers: {
-  //       'Content-Type': 'application/json'
-  //     },
-  //     data: {
-  //       'change': "denied",
-  //       'tetimonieId': id
-  //     }
-  //   })
-
-  // }
-
   // $scope.getTestimonies = () => pendingTestimoniesHttpMethods.getTestimonies()
 
 

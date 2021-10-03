@@ -3,6 +3,10 @@ html{
 
     background-color: #f8f8f8;
 }
+.space{
+    line-height: 200%;
+}
+
 body{
     -ms-overflow-style:none;
     scrollbar-width: thin;
