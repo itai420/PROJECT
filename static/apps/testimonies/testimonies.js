@@ -10,7 +10,7 @@ Testimonies.directive('testimony', () => {
   }
   directive.controller = ($scope, $timeout) => {
     $scope.isChozen = $scope.testimony._id === $scope.id;
-    $timeout(() => $scope.isChozen = false, 1000)
+    $timeout(() => $scope.isChozen = false, 10000)
   }
   return directive
 })
@@ -32,7 +32,7 @@ $scope.openToast = ()=>{
 testimoniesHttpMethods.getTestimonies().then(res => {
     $scope.Testimonies = res.data;
     $scope.id = $location.url().substring(1)
-    $timeout(() => {$anchorScroll()}, 100)
+    $timeout(() => {$anchorScroll()}, 200)
   }).catch(err => console.log(err))
 
   $scope.options = ["no filter", "fracture", "inflammation", "rupture"]
@@ -75,18 +75,18 @@ testimoniesHttpMethods.getTestimonies().then(res => {
   }
 
 
-  $scope.Add=()=>{
-    return $http({
-      method: 'POST',
-      url: '/testimonies/addTestimonies',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      data: {
+  // $scope.Add=()=>{
+  //   return $http({
+  //     method: 'POST',
+  //     url: '/testimonies/addTestimonies',
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     },
+  //     data: {
         
-      }
-    })
-  }
+  //     }
+  //   })
+  // }
 };
 
 }]);
