@@ -24,23 +24,22 @@
 
 	<navbar></navbar>
 	<div class="errorDiv"><span ng-show="errorTaken" class="errorMessage">name or email is already in use</span></div>
-	<!-- <div class="errorDiv"><span ng-if="errorEmailTaken" class="errorMessage">email is already in use</span></div> -->
 	<div class="errorDiv"><span ng-if="errorEmpty" class="errorMessage">please fill all </span></div>
 	
 	<div class="formDiv">
-			<form autocomplete="off" class="form" id="form" ng-submit="checkIfNamEmailNew(name,password,Email)">
-				<h2>Sign up</h2>
+			<form autocomplete="off" class="formSignUp" id="form" ng-submit="checkIfNamEmailNew(name,password,Email)">
+				<h2 class="white formHead">Sign up</h2>
+				<div class="inputsContainer">
 				<input class="nameANDpass" type="text" placeholder="Name"  ng-model="name" name="Name">
 				<input class="nameANDpass" type="{{passwordType}}" ng-model="password" placeholder="Password" name="Password">
 				<input class="nameANDpass" type="email" placeholder="Email" ng-model="Email" name="Email">
+				</div>
 				<div class="check" ng-class="checkBoxColor">
 				<input  ng-click="showPassword()" type="checkbox" ng-model="checkbox" id="checkbox">
 				<label for="checkbox">show password </label>
 			</div>
-			<div>
 				<button class="signIn" type="submit">Sign up</button>
-			</div>
-				<a href="/login" class="moveTo">or log in</a>
+				<a href="/login" class="moveTo white">or log in</a>
 			</form>
 	</div>
 

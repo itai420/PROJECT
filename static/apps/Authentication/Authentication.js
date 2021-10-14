@@ -1,7 +1,7 @@
 var authentication = angular.module('authentication', ['navbar','AuthenticationModule']);
 
 
-authentication.controller('authenticationController', ['$scope', '$http','AuthenticationHttpMethods', function ($scope, $http,AuthenticationHttpMethods) {
+authentication.controller('authenticationController', ['$scope','AuthenticationHttpMethods', function ($scope,AuthenticationHttpMethods) {
     $scope.passwordType = "password";
     $scope.checkBoxColor = "black"
 

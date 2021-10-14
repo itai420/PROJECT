@@ -15,17 +15,6 @@ pendingTestimonies.directive('testimony', () => {
       $scope.status = "approved"
       pendingTestimoniesHttpMethods.Approving(id)
 
-      // return $http({
-      //   method: 'POST',
-      //   url: '/pendingTestimonies',
-      //   headers: {
-      //     'Content-Type': 'application/json'
-      //   },
-      //   data: {
-      //     'change': "approved",
-      //     'tetimonieId': id
-      //   }
-      // })
     }
 
     $scope.Denied = (id) => {

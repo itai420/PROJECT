@@ -7,31 +7,6 @@ navbar.directive('navbar',function(){
     directive.scope={}
     directive.controller=($scope,$http,navbarHttpMethods)=>{
 
-      // $scope.IsUserLogged = () => {
-      //   return $http({
-      //     method: 'POST',
-      //     url: '/IsLogged',
-      //     headers: {
-      //       'Content-Type': 'application/json'
-      //     },
-      //     data: {
-      //       "Question":"log"
-      //     }
-      //   })
-      // }
-      // $scope.IsUserManager = () => {
-      //   return $http({
-      //     method: 'POST',
-      //     url: '/IsLogged',
-      //     headers: {
-      //       'Content-Type': 'application/json'
-      //     },
-      //     data: {
-      //       "Question":"manager"
-      //     }
-      //   })
-      // }
-
     
       navbarHttpMethods.IsUserLogged().then(res => {
         $scope.IsOut=res.data == ""

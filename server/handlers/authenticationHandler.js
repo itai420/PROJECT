@@ -2,16 +2,6 @@ const dbhandler = require('./dbHandler')
 authenticationHandler = {}
 authenticationHandler.byMailOrName = async (userName, userMail) => {
     console.log(userName)
-    // const isNameExist = await dbhandler.findDoucument('users', { name: userName })
-    // const isEmailExist = await dbhandler.findDoucument('users', { email: userMail })
-    // if (isNameExist) {
-    //     console.log("name is taken")
-    //     return "name"
-    // }
-    // if (isEmailExist) {
-    //     console.log("email is taken")
-    //     return "email"
-    // }
     return dbhandler.findDoucument('users',{$or:[{name:userName},{email:userMail}]})
 
 }

@@ -33,22 +33,4 @@ router.get('/successLogin', (req, res) => {
     return res.send(true)
 })
 
-    //------------------- לפני פספורט-------------------------------------------
-
-// router.post('/', async (req, res) => {
-//     // const isExist= await users.findOne({$and:[{name:req.body.name},{password:req.body.password}]})
-//     // if (isExist) {console.log("ok")
-//     //     {
-//     //         currntUser=req.body.name
-//     //         return res.send("ok")
-//     //     }
-//     // }
-//     // console.log("no")
-//     // return res.send("no")
-//     const exist= await myHandler.IsExist(req.body.name,req.body.password)
-//     return res.send(exist)
-// })
-      //------------------- נגמר לפני פספורט-------------------------------------------
-
-
 module.exports=router

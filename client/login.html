@@ -1,14 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="authentication">
-<!-- <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="/vendors/angular.min.js"></script>
-	<script src="/apps/homeApp.js"></script>
-	<link rel="stylesheet" href="\style.css">
-	<title>Log In</title>
-</head> -->
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,21 +27,22 @@
 
 
 	<div class="formDiv">
-			<form autocomplete="off" class="form" ng-submit="IsSigned(name,password)">
-				<h2 class="black">Log in</h2>
+			<form autocomplete="off" class="formLogin" ng-submit="IsSigned(name,password)">
+				<h2 class="white formHead">Log in</h2>
+				<div class="inputsContainer">
 				<input class="nameANDpass" type="text" placeholder="name" ng-model="name" name="name">
 				<input class="nameANDpass" type="{{passwordType}}" placeholder="password" name="password" ng-model="password">
+			</div>
 				<div class="check" ng-class="checkBoxColor">
 				<input  ng-click="showPassword()" type="checkbox" ng-model="checkbox" id="checkbox">
 				<label for="checkbox">show password </label>
 			</div>
-			<div>
 				<button class="signIn" type="submit" >Log in</button>
+			<div class="margin5">
+				<a href="/SignUp" class="moveTo white">or sign up</a>
 			</div>
+
 			</form>
-			<div>
-				<a href="/SignUp" class="moveTo">or sign up</a>
-			</div>
 	</div>
 </body>
 </html>
