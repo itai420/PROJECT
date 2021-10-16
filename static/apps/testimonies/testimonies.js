@@ -56,7 +56,8 @@ testimoniesHttpMethods.getTestimonies().then(res => {
   function DialogController($scope,$mdDialog){
     $scope.LevelOfinjuries= {"fracture":["full fracture","stress fracture"],"inflammation":["chronic inflammation","acute inflammation"],"rupture":["complete rupture","partial rupture"]}
 
-  
+    $scope.activityLevel=["1-2 times a week","3-4 times a week","5-6 times a week","7 times a week or more"]
+    $scope.openLevel=true;
 
     $scope.hide=()=>{
       $mdDialog.hide();
@@ -70,6 +71,7 @@ testimoniesHttpMethods.getTestimonies().then(res => {
   $scope.injuries= ["fracture","inflammation","rupture"]
 
   $scope.updateLevel=()=>{
+    $scope.openLevel=false;
     $timeout(() => {$scope.LevelOfinjuri=$scope.LevelOfinjuries[$scope.filter]
     },0)
   }

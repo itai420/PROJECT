@@ -33,8 +33,8 @@
         </md-select>
 
     <h2 ng-show="Testimonies.length==0"> no testimonies </h2>
-    <div  id={{testimony._id}} ng-repeat="testimony in Testimonies">
-        <testimony id='id' ng-show="filter===testimony.Injury.typeOfInjury||filter==='no filter'" testimony="testimony"></testimony>
-    </div>
+    <div class="testimonyConstainer" layout-align="center" layout="row" layout-wrap="">
+        <testimony flex="100" ng-show="(filter===testimony.Injury.typeOfInjury||filter==='no filter')" flex-gt-md="50"  ng-repeat="testimony in Testimonies" id='id' testimony="testimony"></testimony>
+</div>
 </body>
 </html>

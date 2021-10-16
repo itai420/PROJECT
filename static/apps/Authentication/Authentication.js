@@ -1,7 +1,7 @@
-var authentication = angular.module('authentication', ['navbar','AuthenticationModule']);
+var authentication = angular.module('authentication', ['ngMaterial','ngMessages','navbar','AuthenticationModule']);
 
 
-authentication.controller('authenticationController', ['$scope','AuthenticationHttpMethods', function ($scope,AuthenticationHttpMethods) {
+authentication.controller('authenticationController', ['$scope','AuthenticationHttpMethods','$mdToast', function ($scope,AuthenticationHttpMethods,$mdToast) {
     $scope.passwordType = "password";
     $scope.checkBoxColor = "black"
 
@@ -12,34 +12,35 @@ authentication.controller('authenticationController', ['$scope','AuthenticationH
     }
     $scope.IsSigned = (name, password) => {
         if (!(name && password)) {
-            $scope.errorEmpty = true
-            setTimeout(() => $scope.errorEmpty = false, 0)
-        }
+            $mdToast.show(
+                $mdToast.simple().textContent('Please fill all').hideDelay(2000).position('top left')    )    }
         else {
             AuthenticationHttpMethods.isSigned(name,password).then(res => {
                 console.log(res.data)
                 if (res.data) window.location.href = "/home";
-                else{
-                    $scope.errorUser = true;
-                    setTimeout(() => $scope.errorUser = false, 0)
+                else{        $mdToast.show(
+                    $mdToast.simple().textContent('Incorrect username or password').hideDelay(2000).position('top left'))
                 }
             })
         }
 
     }
 
+    $scope.openToast = ()=>{
+        $mdToast.show(
+        $mdToast.simple().textContent('you have to sign in first').hideDelay(2000).position('top left')  )
+      }
+      
     $scope.checkIfNamEmailNew = (name, password, email) => {
         if (!(name && email && password)) {
-            $scope.errorEmpty = true
-            setTimeout(() => $scope.errorEmpty = false, 0)
-        }
+            $mdToast.show(
+                $mdToast.simple().textContent('Please fill all').hideDelay(2000).position('top left') )       }
         else {
             AuthenticationHttpMethods.checkIfNamEmailNew(name, password, email).then(res => {
                 if (res.data) window.location.href = "/login";
                 if (!res.data) {
-                    $scope.errorTaken = true;
-                    setTimeout(() => $scope.errorTaken = false, 1)
-                }
+                    $mdToast.show(
+                        $mdToast.simple().textContent('Name or email is already in use').hideDelay(2000).position('top left') )               }
             })
         }
     }

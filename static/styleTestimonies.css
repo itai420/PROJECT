@@ -10,6 +10,9 @@ html{
 .space{
     line-height: 200%;
 }
+.testimonyConstainer{
+    margin: 0;
+}
 body{
     -ms-overflow-style:none;
     scrollbar-width: thin;
@@ -79,7 +82,7 @@ md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar {
     /* display: inline-block; */
     position: relative !important;
     box-shadow:rgba(0,0,0,0.12) 2px 2px 11px, rgba(0,0,0,0.24) 2px 2px 11px;
-    margin: 5% 15%;
+    margin: 5% 5%;
     /* max-width: 750px;
     min-width: 750px;
     max-height: 250px;

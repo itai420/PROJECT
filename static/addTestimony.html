@@ -21,7 +21,10 @@
 
 			<md-input-container class="mdContainer">
 				<label>activity level</label>
-				<input ng-model='activity' name="activity" type="text" required>
+				<md-select ng-model="activityFilter" name="levelOfActivity" required>
+					<md-option ng-value="levelOfActivity" ng-repeat="levelOfActivity in activityLevel" required>
+						{{levelOfActivity}} </md-option>
+				</md-select>
 			</md-input-container>
 		</div>
 
@@ -36,7 +39,7 @@
 
 			<md-input-container class="mdContainer">
 				<label>Level of injury</label>
-				<md-select ng-model="injuryfilter" name="LevelOfInjury" required>
+				<md-select ng-disabled="openLevel" ng-model="injuryfilter" name="LevelOfInjury" required>
 					<md-option ng-value="LevelOfInjury" ng-repeat="LevelOfInjury in LevelOfinjuri" required>{{LevelOfInjury}}
 					</md-option>
 				</md-select>

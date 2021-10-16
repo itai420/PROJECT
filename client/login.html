@@ -9,7 +9,7 @@
 	<script src="/vendors/angular-messages/angular-messages.min.js"></script>
 	<script src="/apps/authentication/AuthenticationModule.js"></script>
 	<script src="\apps\navbar\navbarModule.js"></script>
-
+    <script src="/vendors/angular-animate/angular-animate.min.js"></script>
 	<script src="/apps/authentication/authentication.js"></script>
 	<link rel="stylesheet" href="/navBars.css">
 	<script src="\apps\navbar\navbar.js"></script>
@@ -22,8 +22,6 @@
 
 <body ng-controller="authenticationController">
 	<navbar></navbar>
-	<div class="errorDiv" ><span ng-show="errorUser" class="errorMessage">incorrect username or password</span></div>
-	<div class="errorDiv"><span ng-show="errorEmpty" class="errorMessage">please fill all </span></div>
 
 
 	<div class="formDiv">
