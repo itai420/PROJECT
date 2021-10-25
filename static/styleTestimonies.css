@@ -7,6 +7,18 @@ html{
     background-color: rgb(64, 73, 106) !important;
     box-shadow: 0 0 10px 0 rgb(0 0 0 / 50%) !important;
 }
+
+.addButton{
+    position: fixed !important;
+    bottom: 6%;
+    right: 2%;
+    /* left: 95%;
+    bottom: 10%; */
+    z-index: 10;
+    zoom: 4;
+    color: rgb(64, 73, 106) !important;
+}
+
 .space{
     line-height: 200%;
 }
@@ -22,7 +34,7 @@ body{
     text-align: center;
     size: 100%;
     background-color: transparent;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
 }
 body::-webkit-scrollbar{
     display: none;
@@ -75,7 +87,7 @@ md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar {
 
 .testimonyParagraph{
     font-size: 2em;
-    margin: 0% 2%;
+    margin: 0% 1%;
     text-align: left;
 }
 .cont{
