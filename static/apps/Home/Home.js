@@ -1,3 +1,6 @@
+import HomeModule from './HomeModule'
+
+
 var Home = angular.module('Home', ['navbar', 'HomeModule']);
 
 

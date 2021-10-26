@@ -1,3 +1,5 @@
+import pendingTestimoniesModule from './pendingTestimoniesModule'
+
 var pendingTestimonies = angular.module('pendingTestimonies', ['ngMaterial', 'ngMessages', 'navbar','pendingTestimoniesModule']);
 
 pendingTestimonies.directive('testimony', () => {

@@ -24,8 +24,12 @@ module.exports={
         use:{
           loader: 'babel-loader'
         }
+      },
+      {
+        test:/\.(s[ac]|c)ss$/i,
+        use:["style-loader","css-loader","sass-loader"]
       }
     ]
-  }
-  
+  },
+  devtool: 'source-map'
 }

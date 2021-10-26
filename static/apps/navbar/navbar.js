@@ -1,3 +1,5 @@
+import navbarModule from './navbarModule'
+
 var navbar = angular.module('navbar',['navbarModule']);
 
 navbar.directive('navbar',function(){

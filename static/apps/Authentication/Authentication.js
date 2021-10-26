@@ -1,3 +1,5 @@
+import AuthenticationModule from './AuthenticationModule'
+
 var authentication = angular.module('authentication', ['ngMaterial','ngMessages','navbar','AuthenticationModule']);
 
 

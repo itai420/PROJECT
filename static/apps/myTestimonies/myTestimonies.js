@@ -1,3 +1,5 @@
+import myTestimoniesModule from './myTestimoniesModule'
+
 var myTestimonies = angular.module('myTestimonies', ['ngMaterial','ngMessages', 'navbar','myTestimoniesModule']);
 
 myTestimonies.directive('testimony', () => {
