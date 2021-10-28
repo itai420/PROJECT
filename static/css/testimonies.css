@@ -1,6 +1,6 @@
 html{
     /* background: linear-gradient(to bottom,rgb(255, 255, 255),rgb(189, 245, 255) ); */
-
+    scroll-behavior: smooth;
     background-color: #f8f8f8;
 }
 .density{
@@ -9,6 +9,7 @@ html{
 }
 
 .addButton{
+    cursor: pointer;
     position: fixed !important;
     bottom: 6%;
     right: 2%;
@@ -16,8 +17,12 @@ html{
     bottom: 10%; */
     z-index: 10;
     zoom: 4;
+    border-radius: 50%;
     color: rgb(64, 73, 106) !important;
 }
+.addButton:active{
+    -webkit-box-shadow: inset 0px 0px 21px 0px #000000; 
+    box-shadow: inset 0px 0px 21px 0px #000000;}
 
 .space{
     line-height: 200%;
@@ -193,6 +198,9 @@ form{
 md-toast.md-default-theme .md-toast-content, md-toast .md-toast-content {
     background-color: #ff2f2f;
     color: rgb(250,250,250);
-    position: sticky;
+    position: fixed !important;
+    top: 6%;
+    left: 2%;
+
     overflow: visible;
 }

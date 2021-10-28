@@ -1,11 +1,13 @@
 import navbarModule from './navbarModule'
+import '../../../static/css/navBars.css'
+
 
 var navbar = angular.module('navbar',['navbarModule']);
 
 navbar.directive('navbar',function(){
     let directive={}  
     directive.restrict='E'
-    directive.templateUrl ="/navbar.html"
+    directive.templateUrl ="/directives/navbar.html"
     directive.scope={}
     directive.controller=($scope,$http,navbarHttpMethods)=>{
 
@@ -26,3 +28,4 @@ navbar.directive('navbar',function(){
     return directive
   
   });
+export default navbar

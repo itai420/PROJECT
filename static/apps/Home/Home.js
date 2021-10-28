@@ -1,4 +1,8 @@
-import HomeModule from './HomeModule'
+import '../../../static/css/home.css'
+import '../../vendors/angular.min.js'
+
+import HomeModule from './HomeModule.js'
+import navbar from '../navbar/navbar.js'
 
 
 var Home = angular.module('Home', ['navbar', 'HomeModule']);
@@ -7,14 +11,13 @@ var Home = angular.module('Home', ['navbar', 'HomeModule']);
 Home.directive('drop', () => {
   let directive = {}
   directive.restrict = 'E'
-  directive.templateUrl = "/drop.html"
+  directive.templateUrl = "/directives/drop.html"
   directive.scope = {
     content: '=content'
   }
   directive.controller = ($scope,$timeout,$interval) => {
 
     let delay=$scope.content.shift()*1000
-    console.log(delay+"eeeeeeeeeeeee")
     console.log($scope.content)
     let len= $scope.content.length
     $scope.currentPosition=0
@@ -31,7 +34,7 @@ Home.directive('drop', () => {
 Home.controller('Home', ['$scope', '$interval', '$window', '$timeout', 'HomeHttpMethods', function ($scope, $interval, $window, $timeout, HomeHttpMethods) {
 
   $scope.goToTheTestimony = (id) => {
-    window.location.href = "/testimonies#" + id
+   href = "/testimonies"&id
   }
 
   HomeHttpMethods.getQuotes().then(res => {

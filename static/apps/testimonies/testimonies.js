@@ -1,11 +1,22 @@
+import '../../../static/css/testimonies.css'
+import '../../vendors/angular.min.js'
+import '../../vendors/angular-material/angular-material.min.js'
+import '../../vendors/angular-aria/angular-aria.min.js'
+import '../../vendors/angular-animate/angular-animate.min.js'
+import '../../vendors/angular-messages/angular-messages.min.js'
+import '../../vendors/angular-material/angular-material.min.css'
+// import 'https://kit.fontawesome.com/685fee1bbe.js'
 import testimoniesModule from './testimoniesModule'
+import navbar from '../navbar/navbar'
+
+
 
 var Testimonies = angular.module('Testimonies', ['ngMaterial','ngMessages', 'navbar','testimoniesModule']);
 
 Testimonies.directive('testimony', () => {
   let directive = {}
   directive.restrict = 'E'
-  directive.templateUrl = "/testimony.html"
+  directive.templateUrl = "/directives/testimony.html"
   directive.scope = {
     id: '=id',
     testimony: '=testimony'
@@ -34,7 +45,7 @@ $scope.openToast = ()=>{
 testimoniesHttpMethods.getTestimonies().then(res => {
     $scope.Testimonies = res.data;
     $scope.id = $location.url().substring(1)
-    $timeout(() => {$anchorScroll()}, 200)
+    $timeout(() => {$anchorScroll()}, 300)
   }).catch(err => console.log(err))
 
   $scope.options = ["no filter", "fracture", "inflammation", "rupture"]
@@ -46,7 +57,7 @@ testimoniesHttpMethods.getTestimonies().then(res => {
     console.log("open modal")
     $mdDialog.show({
       controller:DialogController,
-      templateUrl:'../addTestimony.html',
+      templateUrl:'../directives/addTestimony.html',
       parent:angular.element(document.body),
       targetEvent:ev,
       locals:{},

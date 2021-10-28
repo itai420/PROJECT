@@ -15,3 +15,4 @@ function myTestimoniesHttpMethodsFunc($http) {
     }
     return httpService
 }
+export default myTestimoniesModule

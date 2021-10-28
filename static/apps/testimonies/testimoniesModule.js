@@ -31,3 +31,4 @@ function testimoniesHttpMethodsFunc($http) {
     
     return httpService
 }
+export default testimoniesModule

@@ -1,4 +1,4 @@
-const dbhandler = require('./dbHandler')
+const dbhandler = require('./db/dbHandler')
 authenticationHandler = {}
 authenticationHandler.byMailOrName = async (userName, userMail) => {
     console.log(userName)

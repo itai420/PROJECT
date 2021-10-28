@@ -1,4 +1,13 @@
+import '../../../static/css/authentication.css'
+import '../../vendors/angular.min.js'
+import '../../vendors/angular-material/angular-material.min.js'
+import '../../vendors/angular-aria/angular-aria.min.js'
+import '../../vendors/angular-animate/angular-animate.min.js'
+import '../../vendors/angular-messages/angular-messages.min.js'
+import '../../vendors/angular-material/angular-material.min.css'
+
 import AuthenticationModule from './AuthenticationModule'
+import navbar from '../navbar/navbar'
 
 var authentication = angular.module('authentication', ['ngMaterial','ngMessages','navbar','AuthenticationModule']);
 

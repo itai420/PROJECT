@@ -30,3 +30,4 @@ function AuthenticationHttpMethodsFunc($http) {
     }
     return httpService
 }
+export default AuthenticationModule

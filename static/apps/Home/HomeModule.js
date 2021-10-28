@@ -17,3 +17,4 @@ function HomeHttpMethodsFunc($http) {
       }
     return httpService
 }
+export default HomeModule

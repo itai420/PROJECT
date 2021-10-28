@@ -29,3 +29,4 @@ function navbarHttpMethodsFunc($http) {
 
     return httpService
 }
+ export default navbarModule

@@ -1,7 +1,7 @@
 const mongoose= require('mongoose');
 dbhandler={}
 
-const getModel = modelName =>  require(`.././models/${modelName}`);
+const getModel = modelName =>  require(`../.././models/${modelName}`);
 
 mongoose.connect('mongodb://localhost:27017/test', ()=>{
     console.log('connected to DB!')}).then(console.log("nice connection bro"))

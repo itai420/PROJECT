@@ -44,3 +44,4 @@ function pendingTestimoniesHttpMethodsFunc($http) {
 
     return httpService
 }
+export default pendingTestimoniesModule

@@ -1,22 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="authentication">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="/vendors/angular.min.js"></script>
-	<script src="/vendors/angular-material/angular-material.min.js"></script>
-	<script src="/vendors/angular-aria/angular-aria.min.js"></script>
-	<script src="/vendors/angular-messages/angular-messages.min.js"></script>
-	<script src="/apps/authentication/AuthenticationModule.js"></script>
-	<script src="\apps\navbar\navbarModule.js"></script>
-    <script src="/vendors/angular-animate/angular-animate.min.js"></script>
-	<script src="/apps/authentication/authentication.js"></script>
-	<link rel="stylesheet" href="/navBars.css">
-	<script src="\apps\navbar\navbar.js"></script>
-
-	<link rel="stylesheet" href="/style.css">
-	<link rel="stylesheet" href="/vendors/angular-material/angular-material.css">
-
+	<script src="/public/authentication.js"></script>
 	<title>Log In</title>
 </head>
 
@@ -25,22 +13,23 @@
 
 
 	<div class="formDiv">
-			<form autocomplete="off" class="formLogin" ng-submit="IsSigned(name,password)">
-				<h2 class="white formHead">Log in</h2>
-				<div class="inputsContainer">
+		<form autocomplete="off" class="formLogin" ng-submit="IsSigned(name,password)">
+			<h2 class="white formHead">Log in</h2>
+			<div class="inputsContainer">
 				<input class="nameANDpass" type="text" placeholder="name" ng-model="name" name="name">
 				<input class="nameANDpass" type="{{passwordType}}" placeholder="password" name="password" ng-model="password">
 			</div>
-				<div class="check" ng-class="checkBoxColor">
-				<input  ng-click="showPassword()" type="checkbox" ng-model="checkbox" id="checkbox">
+			<div class="check" ng-class="checkBoxColor">
+				<input ng-click="showPassword()" type="checkbox" ng-model="checkbox" id="checkbox">
 				<label for="checkbox">show password </label>
 			</div>
-				<button class="signIn" type="submit" >Log in</button>
+			<button class="signIn" type="submit">Log in</button>
 			<div class="margin5">
 				<a href="/SignUp" class="moveTo white">or sign up</a>
 			</div>
 
-			</form>
+		</form>
 	</div>
 </body>
+
 </html>

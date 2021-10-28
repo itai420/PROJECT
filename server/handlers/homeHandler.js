@@ -1,4 +1,4 @@
-const dbhandler = require('./dbHandler')
+const dbhandler = require('./db/dbHandler.js')
 homeHandler = {}
 
 homeHandler.getQuotes = (filter) => dbhandler.findQuotes('testimonies',filter)

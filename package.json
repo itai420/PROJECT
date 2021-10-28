@@ -7,8 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./server/index.js",
     "build": "webpack",
-    "build dev": "webpack --watch"
-
+    "build-dev": "webpack --watch"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +21,9 @@
     "express": "^4.17.1",
     "express-flash": "0.0.2",
     "express-session": "^1.17.1",
+    "file-loader": "^6.2.0",
+    "font-awesome-webpack": "0.0.5-beta.2",
+    "jquery": "^3.6.0",
     "mongoose": "^5.9.22",
     "nodemon": "^2.0.1",
     "passport": "^0.4.0",

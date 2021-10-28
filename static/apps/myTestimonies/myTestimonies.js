@@ -1,11 +1,21 @@
+import '../../../static/css/myTestimonies.css'
+import '../../vendors/angular.min.js'
+import '../../vendors/angular-material/angular-material.min.js'
+import '../../vendors/angular-aria/angular-aria.min.js'
+import '../../vendors/angular-animate/angular-animate.min.js'
+import '../../vendors/angular-messages/angular-messages.min.js'
+import '../../vendors/angular-material/angular-material.min.css'
+
 import myTestimoniesModule from './myTestimoniesModule'
+import navbar from '../navbar/navbar'
+
 
 var myTestimonies = angular.module('myTestimonies', ['ngMaterial','ngMessages', 'navbar','myTestimoniesModule']);
 
 myTestimonies.directive('testimony', () => {
   let directive = {}
   directive.restrict = 'E'
-  directive.templateUrl = "/testimony.html"
+  directive.templateUrl = "/directives/testimony.html"
   directive.scope = {
     id: '=id',
     testimony: '=testimony'

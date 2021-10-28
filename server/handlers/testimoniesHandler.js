@@ -1,4 +1,4 @@
-const dbhandler = require('./dbHandler')
+const dbhandler = require('./db/dbHandler')
 testimoniesHandler = {}
 
 testimoniesHandler.getTestimonies = () => dbhandler.getAllDoucuments('testimonies')
