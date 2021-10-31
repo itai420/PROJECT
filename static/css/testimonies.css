@@ -30,7 +30,11 @@ html{
 .testimonyConstainer{
     margin: 0;
 }
+.md-dialog-is-showing{
+    max-height: none !important;
+}
 body{
+    height:auto !important;
     -ms-overflow-style:none;
     scrollbar-width: thin;
     overflow-y: scroll;
@@ -144,11 +148,22 @@ h3{
     text-decoration: underline;
 }
 .dialog{
-    min-width: 600px;
-    min-height: 700px;
-    height: 60%;
-    width: 35%;
+    position: fixed !important;
+    z-index: 10;
+    top : 50%;
+    left: 50%;
+    min-width: 600px; 
+    min-height: 650px;
+    max-height: 60%;
+    max-width: 35%;
+    /* transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important; */
 }
+md-dialog.md-transition-in {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) scale(1) !important;
+    transform: translate(-50%, -50%) scale(1) !important;
+}
+
 form{
     height: 80%;
     padding: 20px 20px !important;
