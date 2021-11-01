@@ -33,15 +33,15 @@
 <i class="fas addButton fa-plus-circle" ng-show="!IsOut" ng-click="showDialog($event)" ></i>
 <i class="fas addButton fa-plus-circle" ng-show="IsOut" ng-click="openToast()" ></i>
 
-    <md-button ng-show="!IsOut" class="md-primary md-raised density" ng-click="showDialog($event)">add testimony</md-button>
-    <md-button ng-show="IsOut" ng-click="openToast()" class="md-primary md-raised density" > add testimony</md-button>
+    <!-- <md-button ng-show="!IsOut" class="md-primary md-raised density" ng-click="showDialog($event)">add testimony</md-button>
+    <md-button ng-show="IsOut" ng-click="openToast()" class="md-primary md-raised density" > add testimony</md-button> -->
     <md-select  placeholder="filter by injury" class="md-no-underline filter" ng-model="filter">
         <md-option ng-click="fu()" ng-model="filter" ng-value="opt" ng-repeat="opt in options">{{opt}} </md-option>
         </md-select>
 
     <h2 ng-show="Testimonies.length==0"> no testimonies </h2>
     <div class="testimonyConstainer" layout-align="center" layout="row" layout-wrap="">
-        <testimony flex="100" ng-show="(filter===testimony.Injury.typeOfInjury||filter==='no filter')" flex-gt-md="45"  ng-repeat="testimony in Testimonies" id='id' testimony="testimony"></testimony>
+        <testimony flex="90" ng-show="(filter===testimony.Injury.typeOfInjury||filter==='no filter')" flex-gt-md="45"  ng-repeat="testimony in Testimonies" id='id' testimony="testimony"></testimony>
 </div>
 </body>
 </html>

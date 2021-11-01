@@ -1,6 +1,6 @@
 html{
     /* background: linear-gradient(to bottom,rgb(255, 255, 255),rgb(189, 245, 255) ); */
-
+    overflow: hidden !important;
     background-color: #f8f8f8;
 }
 .space{
@@ -18,9 +18,9 @@ body{
     background-color: transparent;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-body::-webkit-scrollbar{
+/* body::-webkit-scrollbar{
     display: none;
-}
+} */
 label{
     color: rgba(46, 46, 46, 0.55) !important;
 }

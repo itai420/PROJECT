@@ -1,6 +1,6 @@
 const express =require('express');
 const router = express.Router();
-const users =require('.././models/users')
+const users =require('../handlers/db/models/users')
 const myHandler=require('../handlers/authenticationHandler')
 const bcrypt= require('bcryptjs')
 const passport=require('passport')

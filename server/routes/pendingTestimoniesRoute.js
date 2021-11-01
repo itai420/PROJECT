@@ -1,7 +1,7 @@
 const express =require('express');
 const router = express.Router();
 const myHandler=require('../handlers/pendingTestimoniesHandler');
-const testimonies = require('../models/testimonies');
+const testimonies = require('../handlers/db/models/testimonies');
 const path = require('path');
 
 

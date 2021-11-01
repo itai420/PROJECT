@@ -13,7 +13,7 @@ navbar.directive('navbar',function(){
 
     
       navbarHttpMethods.IsUserLogged().then(res => {
-        $scope.IsOut=res.data == ""
+        $scope.IsOut=res.data === ""
         if($scope.IsOut){
           $scope.manager=false
         }

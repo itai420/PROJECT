@@ -64,7 +64,7 @@ navbar.directive('navbar', function () {
 
   directive.controller = function ($scope, $http, navbarHttpMethods) {
     navbarHttpMethods.IsUserLogged().then(function (res) {
-      $scope.IsOut = res.data == "";
+      $scope.IsOut = res.data === "";
 
       if ($scope.IsOut) {
         $scope.manager = false;

@@ -15,17 +15,16 @@ Home.directive('drop', () => {
   directive.scope = {
     content: '=content'
   }
-  directive.controller = ($scope,$timeout,$interval) => {
-
-    let delay=$scope.content.shift()*1000
-    console.log($scope.content)
-    let len= $scope.content.length
-    $scope.currentPosition=0
-    $timeout($interval(()=>$scope.currentPosition=Math.floor(Math.random()*len),4000),delay)
+  directive.controller = ($scope, $timeout, $interval) => {
+    const delay = $scope.content.shift() * 1000;
+    console.log($scope.content);
+    const len= $scope.content.length;
+    $scope.currentPosition = 0;
+    $timeout( $interval( ()=> $scope.currentPosition = Math.floor(Math.random()*len), 4000), delay);
     $scope.goToTheTestimony = (id) => {
       window.location.href = "/testimonies#" + id
-    }  
-    console.log($scope.currentPosition)
+    };  
+    console.log($scope.currentPosition);
   }
   return directive
 })
