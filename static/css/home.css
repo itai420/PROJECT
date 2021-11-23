@@ -97,6 +97,7 @@ h2{
 
 }
 .dropContent{
+    cursor: pointer;
     max-width: 90%;
     white-space: nowrap;
     overflow: hidden;
@@ -104,6 +105,7 @@ h2{
     z-index: 1;
 }
 .drop{
+    cursor: pointer;
     /* box-shadow: rgba(0, 0, 0, 0.25) 5px 5px 5px; */
     position: absolute;
     transform: rotate(45deg); 

@@ -44,7 +44,7 @@ $scope.openToast = ()=>{
   $mdToast.simple().textContent('you have to sign in first').hideDelay(2000).position('top left')  )
 }
 testimoniesHttpMethods.getTestimonies().then(res => {
-    $scope.Testimonies = res.data;
+    $scope.Testimonies = res.data.reverse();
     $scope.id = $location.url().substring(1)
     $timeout(() => {$anchorScroll()}, 300)
   }).catch(err => console.log(err))

@@ -70,6 +70,9 @@ md-select .md-select-value.md-select-placeholder {
 }
 md-tabs.md-default-theme.md-primary>md-tabs-wrapper>md-tabs-canvas>md-pagination-wrapper>md-tab-item:not([disabled]), md-tabs.md-primary>md-tabs-wrapper>md-tabs-canvas>md-pagination-wrapper>md-tab-item:not([disabled]), md-tabs.md-default-theme.md-primary>md-tabs-wrapper>md-tabs-canvas>md-pagination-wrapper>md-tab-item:not([disabled]) md-icon, md-tabs.md-primary>md-tabs-wrapper>md-tabs-canvas>md-pagination-wrapper>md-tab-item:not([disabled]) md-icon {
     color: black;
+    padding: 13px !important;
+    font-size: 1em;
+    font-weight: bolder;
 }
 
 md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar {
@@ -77,6 +80,9 @@ md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar {
     background: black;
 }
 
+md-tabs.md-default-theme.md-primary>md-tabs-wrapper>md-tabs-canvas>md-pagination-wrapper>md-tab-item:not([disabled]).md-active, md-tabs.md-primary>md-tabs-wrapper>md-tabs-canvas>md-pagination-wrapper>md-tab-item:not([disabled]).md-active, md-tabs.md-default-theme.md-primary>md-tabs-wrapper>md-tabs-canvas>md-pagination-wrapper>md-tab-item:not([disabled]).md-active md-icon, md-tabs.md-primary>md-tabs-wrapper>md-tabs-canvas>md-pagination-wrapper>md-tab-item:not([disabled]).md-active md-icon, md-tabs.md-default-theme.md-primary>md-tabs-wrapper>md-tabs-canvas>md-pagination-wrapper>md-tab-item:not([disabled]).md-focused, md-tabs.md-primary>md-tabs-wrapper>md-tabs-canvas>md-pagination-wrapper>md-tab-item:not([disabled]).md-focused, md-tabs.md-default-theme.md-primary>md-tabs-wrapper>md-tabs-canvas>md-pagination-wrapper>md-tab-item:not([disabled]).md-focused md-icon, md-tabs.md-primary>md-tabs-wrapper>md-tabs-canvas>md-pagination-wrapper>md-tab-item:not([disabled]).md-focused md-icon {
+   color: black;
+}
 
 .isHigh{
     transition-duration: 10000ms ;
@@ -105,6 +111,7 @@ md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar {
     text-align: left;
 }
 .cont{
+    border-radius: 20px;
     /* display: inline-block; */
     position: relative !important;
     box-shadow:rgba(0,0,0,0.12) 2px 2px 11px, rgba(0,0,0,0.24) 2px 2px 11px;

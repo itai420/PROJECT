@@ -38,6 +38,7 @@ md-select .md-select-value.md-select-placeholder {
 }
 md-tabs.md-default-theme.md-primary>md-tabs-wrapper>md-tabs-canvas>md-pagination-wrapper>md-tab-item:not([disabled]), md-tabs.md-primary>md-tabs-wrapper>md-tabs-canvas>md-pagination-wrapper>md-tab-item:not([disabled]), md-tabs.md-default-theme.md-primary>md-tabs-wrapper>md-tabs-canvas>md-pagination-wrapper>md-tab-item:not([disabled]) md-icon, md-tabs.md-primary>md-tabs-wrapper>md-tabs-canvas>md-pagination-wrapper>md-tab-item:not([disabled]) md-icon {
     color: black;
+    padding: 12px;
 }
 
 md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar {
@@ -73,6 +74,7 @@ md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar {
     text-align: left;
 }
 .cont{
+    border-radius: 20px;
     /* display: inline-block; */
     position: relative !important;
     box-shadow:rgba(0,0,0,0.12) 2px 2px 11px, rgba(0,0,0,0.24) 2px 2px 11px;

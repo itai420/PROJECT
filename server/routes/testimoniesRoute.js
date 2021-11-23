@@ -20,13 +20,13 @@ router.post('/', async (req, res) => {
 
 router.post('/addTestimonies', async (req, res) => {
     if(!req.user) return ("you came to the wrong house boy")
-    const {name, age, sports, levelOfActivity, weeks, quantity, Quote, typeOfInjury,LevelOfInjury} = req.body
+    const {name, age, sports, levelOfActivity, days, quantity, Quote, typeOfInjury,LevelOfInjury} = req.body
     const Email = req.user.email
     const Approved= req.user.manager ? "approved":"pending"
     console.log("this is",typeOfInjury)
     Profile = {name, age, sports, levelOfActivity}
     Injury={typeOfInjury,LevelOfInjury}
-    time=(weeks==1 ? weeks+' week':weeks+' weeks')
+    time=(days==1 ? days+' week':days+' days')
 
     Treatment= {quantity,time}
 
