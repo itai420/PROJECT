@@ -12,20 +12,20 @@
 	<navbar></navbar>
 
 
-	<div class="formDiv">
+	<div dir="rtl" class="formDiv">
 		<form autocomplete="off" class="formLogin" ng-submit="IsSigned(name,password)">
-			<h2 class="white formHead">Log in</h2>
+			<h2 class="formHead">התחבר לאתר</h2>
 			<div class="inputsContainer">
-				<input class="nameANDpass" type="text" placeholder="name" ng-model="name" name="name">
-				<input class="nameANDpass" type="{{passwordType}}" placeholder="password" name="password" ng-model="password">
+				<input class="nameANDpass" type="text" placeholder="שם" ng-model="name" name="name">
+				<input class="nameANDpass" type="{{passwordType}}" placeholder="סיסמא" name="password" ng-model="password">
 			</div>
 			<div class="check" ng-class="checkBoxColor">
 				<input ng-click="showPassword()" type="checkbox" ng-model="checkbox" id="checkbox">
-				<label for="checkbox">show password </label>
+				<label for="checkbox">הראה סיסמא</label>
 			</div>
-			<button class="signIn" type="submit">Log in</button>
+			<button class="signIn" type="submit">התחבר</button>
 			<div class="margin5">
-				<a href="/SignUp" class="moveTo white">or sign up</a>
+				<a href="/SignUp" class="moveTo black">אין חשבון? הירשם</a>
 			</div>
 
 		</form>

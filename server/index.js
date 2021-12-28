@@ -4,7 +4,7 @@ const session = require('express-session')
 const signUpRoute = require('./routes/signUpRoute')
 const loginUpRoute = require('./routes/loginRoute')
 const isLoggedRoute = require('./routes/isLoggedRoute')
-const pendingTestimoniesRoute= require('./routes/pendingTestimoniesRoute')
+const pendingTestimoniesRoute = require('./routes/pendingTestimoniesRoute')
 
 const homeUpRoute = require('./routes/homeRoute')
 const testimoniesRoute = require('./routes/testimoniesRoute')
@@ -22,7 +22,7 @@ initializePassport(
     name => AuthHandler.findUserBy({ name: name }),
     id => AuthHandler.findDoucumentById(id)
 )
-const PORT = 3000
+const PORT = process.env.PORT || 3000;
 
 app.use(flash())
 app.use(session({
@@ -39,7 +39,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 
-app.get('/logout', function (req, res) {
+app.get('/logout', function(req, res) {
     req.logout()
     res.redirect('/')
 })
@@ -49,7 +49,7 @@ app.use('/home', homeUpRoute)
 app.use('/login', loginUpRoute)
 app.use('/testimonies', testimoniesRoute)
 app.use('/myTestimonies', myTestimoniesRoute)
-app.use('/isLogged',isLoggedRoute)
+app.use('/isLogged', isLoggedRoute)
 app.use('/pendingTestimonies', pendingTestimoniesRoute)
 
 app.get('/', (req, res) => {

@@ -9,14 +9,13 @@
     <title>pending</title>
 </head>
 
-<body ng-controller="pendingTestimoniesController">
+<body dir="rtl" ng-controller="pendingTestimoniesController">
     <navBar></navBar>
     <md-select class="md-no-underline filter" ng-model="filter">
         <md-option ng-click="fu()" ng-value="filter" ng-repeat="filter in options">{{filter}} </md-option>
     </md-select>
-    <div class="cont2" ng-show="filter===testimony.Approved||filter==='filter by status'" id={{testimony._id}}
-        ng-repeat="testimony in myTestimonies">
-        <testimony id='id' testimony="testimony"></testimony>
+    <div class="testimonyConstainer" layout-align="center" layout="row" layout-wrap="">
+        <testimony ng-show="filter===testimony.Approved||filter==='סנן על פי סטטוס'" flex="90" flex-gt-md="45" ng-repeat="testimony in myTestimonies" id='id' testimony="testimony"></testimony>
     </div>
 
 </body>

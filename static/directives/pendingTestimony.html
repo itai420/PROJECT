@@ -1,35 +1,29 @@
-<span ng-click="Approving(testimony._id)" ng-class="{'approved':status=='approved'}" class="yes fa fa-check"></span>
-<span ng-click="Denied(testimony._id)" ng-class="{'denied':status=='denied'}" class=" no fa fa-times"></span>
+<div dir="rtl" id={{testimony._id}} ng-cloak class="cont" ng-class="{'isHigh':isChozen}">
+    <span ng-click="Approving(testimony._id)" ng-class="{'approved':status=='מאושר'}" class="yes fa fa-check"></span>
+    <span ng-click="Denied(testimony._id)" ng-class="{'denied':status=='נדחה'}" class=" no fa fa-times"></span>
 
-<div  ng-cloak class="cont" ng-class="{'isHigh':isChozen}">
-    <md-content>
-        <md-tabs ng-class="testimony.Injury.typeOfInjury" class="md-primary" md-center-tabs>
-            <md-tab label="my injury">
+    <md-content class="testimonyBorder" ng-class="testimony.Injury.typeOfInjury">
+        <md-tabs class="{{testimony.Injury.typeOfInjury}} emptyBackground md-primary" md-center-tabs>
+            <md-tab label="הפציעה">
                 <md-content class="md-padding">
-                    <p class="space testimonyParagraph">type of injury: {{testimony.Injury.typeOfInjury}} <br>
-                        injury level: {{testimony.Injury.LevelOfInjury}}
+                    <p class="space testimonyParagraph">סוג פציעה: {{testimony.Injury.typeOfInjury}} <br> דרגת פציעה: {{testimony.Injury.LevelOfInjury}}
                     </p>
                 </md-content>
             </md-tab>
-            <md-tab label="the treatment">
+            <md-tab label="הטיפול">
                 <md-content class="md-padding">
-                    <p class="space testimonyParagraph">took {{testimony.Treatment.quantity}} doses a day <br>
-                        for {{testimony.Treatment.time}} 
+                    <p class="space testimonyParagraph">לקח {{testimony.Treatment.quantity}} מנות ליום <br> למשך {{testimony.Treatment.time}}
                     </p>
                 </md-content>
             </md-tab>
-            <md-tab label="Quote">
+            <md-tab label="ציטוט">
                 <md-content class="md-padding">
                     <h2 class="md-display-1">"{{testimony.Quote}}"</h2>
                 </md-content>
             </md-tab>
-            <md-tab label="profile">
+            <md-tab label="פרופיל">
                 <md-content class="md-padding">
-                    <!-- <h2 class="md-display-1">Tab Two</h2> -->
-                    <p class="testimonyParagraph">name: {{testimony.Profile.name}} <br>
-                        age: {{testimony.Profile.age}}<br>
-                        sports: {{testimony.Profile.sports}}<br>
-                        level of activity: {{testimony.Profile.activity}}<br>
+                    <p class="testimonyParagraph">שם: {{testimony.Profile.name}} <br> גיל: {{testimony.Profile.age}}<br> ספורט: {{testimony.Profile.sports}}<br> רמת פעילות: {{testimony.Profile.levelOfActivity}}<br>
                     </p>
                 </md-content>
             </md-tab>

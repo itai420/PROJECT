@@ -12,20 +12,20 @@
 
 	<navbar></navbar>
 
-	<div class="formDiv">
+	<div dir="rtl" class="formDiv">
 		<form autocomplete="off" class="formSignUp" id="form" ng-submit="checkIfNamEmailNew(name,password,Email)">
-			<h2 class="white formHead">Sign up</h2>
+			<h2 class="formHead">הירשם לאתר</h2>
 			<div class="inputsContainer">
-				<input class="nameANDpass" type="text" placeholder="Name" ng-model="name" name="Name">
-				<input class="nameANDpass" type="{{passwordType}}" ng-model="password" placeholder="Password" name="Password">
-				<input class="nameANDpass" type="email" placeholder="Email" ng-model="Email" name="Email">
+				<input class="nameANDpass" type="text" placeholder="שם" ng-model="name" name="Name">
+				<input class="nameANDpass" type="{{passwordType}}" ng-model="password" placeholder="סיסמא" name="Password">
+				<input class="nameANDpass" type="email" placeholder="מייל" ng-model="Email" name="Email">
 			</div>
 			<div class="check" ng-class="checkBoxColor">
 				<input ng-click="showPassword()" type="checkbox" ng-model="checkbox" id="checkbox">
-				<label for="checkbox">show password </label>
+				<label for="checkbox">הראה סיסמא </label>
 			</div>
-			<button class="signIn" type="submit">Sign up</button>
-			<a href="/login" class="moveTo white">or log in</a>
+			<button class="signIn" type="submit">הירשם</button>
+			<a href="/login" class="moveTo black">יש חשבון? התחבר</a>
 		</form>
 	</div>
 

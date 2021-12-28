@@ -10,7 +10,7 @@ function HomeHttpMethodsFunc($http) {
             'Content-Type': 'application/json'
           },
           data: {
-            "filter":{"Approved":"approved"}
+            "filter":{"Approved":"מאושר"}
 
           }
         })

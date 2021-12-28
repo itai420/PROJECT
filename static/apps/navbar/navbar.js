@@ -10,7 +10,7 @@ navbar.directive('navbar',function(){
     directive.templateUrl ="/directives/navbar.html"
     directive.scope={}
     directive.controller=($scope,$http,navbarHttpMethods)=>{
-
+    $scope.IsOut=true;
     
       navbarHttpMethods.IsUserLogged().then(res => {
         $scope.IsOut=res.data === ""

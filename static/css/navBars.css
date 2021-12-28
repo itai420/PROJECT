@@ -7,7 +7,7 @@
     border-width: 0px;
     border-style: solid;
     text-decoration: none;
-    padding: 16px 20px;
+    padding: 16px 30px;
     color: black;
 }
 .navBarBody{
@@ -23,6 +23,7 @@
     height: 76px;
     display: flex;
     align-items: center;
+    flex-direction: row-reverse;
 
 }
 
@@ -46,11 +47,13 @@
 }
 
 .toLogIn{
-    justify-self: flex-end;
-    margin-left: auto;
+    justify-self: flex-start;
+    margin-right: auto;
+    margin-left: 1%;
 }
 
 .navBar a::after{
+    transition-duration:0.5s;
     content: '';
     background-color:transparent;
     display: block;

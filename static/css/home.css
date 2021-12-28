@@ -5,7 +5,8 @@ body{
     height: 100vh;
     text-align: center;
     background-color: #f8f8f8;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    font-family: assistant,Sans-serif;
 }
 
 h1{
@@ -17,14 +18,14 @@ h2{
 
 
 
-.fracture{
-    border-color: rgb(0, 77, 116) !important;
+.שבר{
+    border-color: rgb(0, 113, 170) !important;
 }
-.inflammation{
+.דלקת{
     border-color: rgba(189, 16, 0, 0.75) !important;
 }
-.rupture{
-    border-color: rgb(29, 117, 0) !important;
+.קרע{
+    border-color: rgb(37, 146, 0) !important;
 }
 
 

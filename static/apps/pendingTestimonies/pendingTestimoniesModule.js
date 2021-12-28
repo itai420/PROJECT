@@ -10,7 +10,7 @@ function pendingTestimoniesHttpMethodsFunc($http) {
                 'Content-Type': 'application/json'
             },
             data: {
-                'change': "approved",
+                'change': "מאושר",
                 'tetimonieId': id
             }
         })
@@ -23,7 +23,7 @@ function pendingTestimoniesHttpMethodsFunc($http) {
                 'Content-Type': 'application/json'
             },
             data: {
-                'change': "denied",
+                'change': "נדחה",
                 'tetimonieId': id
             }
         })
